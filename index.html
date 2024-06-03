@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awal Portofolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <nav>
+        </div>
         <div class="logo-icon"></div>
 
-        <section>
+        <section class="nav-item-li">
             <a class="nav-item" href="#home">Home</a>
             <a class="nav-item" href="#facilities">Our Facilities</a>
             <a class="nav-item" href="#message-us">Message Us</a>
@@ -22,13 +21,13 @@
 
     <section>
         <!-- Home -->
-        <section id="home">
+        <section class="top-banner" id="home">
             <header>
-                <h1>Hi Awal, Welcome to website</h1>
+                <h1>Hai <span>Otaku</span>! Jelajahi Dunia Anime, Manga, dan Novel Favoritmu! </h1>
             </header>
 
             <article>
-                <p>Lorem ipsum</p>
+                <p>Selamat datang di SkullNime! Temukan anime, manga, dan novel favoritmu dengan mudah. Mulai petualanganmu sekarang!</p>
                 <div class="banner-container">
 
                 </div>
@@ -38,25 +37,31 @@
         <hr>
 
         <!-- Our Facilities -->
-        <section id="facilities">
+        <section class="mid-info" id="facilities">
             <header>
-                <h1>Our Facilities</h1>
+                <h1>Our Links</h1>
             </header>
 
-            <article class="facility-list">
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h5>
+            <article class="link-li">
+                <div class="mal">
+                    <a href="https://myanimelist.net">
+                        <div id="mal-logo" class="ikon-link"></div>
+                    </a>
+                    <h5>MyAnimeList</h5>
                 </div>
 
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h5>
+                <div class="novel">
+                    <a href="https://www.novelupdates.com">
+                        <div id="novel-logo" class="ikon-link"></div>
+                    </a>
+                    <h5>NovelUpdate</h5>
                 </div>
 
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h5>
+                <div class="manga">
+                    <a href="https://www.mangaupdates.com">
+                        <div id="manga-logo" class="ikon-link"></div>
+                    </a>
+                    <h5>Mangaupdate</h5>
                 </div>
             </article>
         </section>
@@ -64,34 +69,68 @@
         <hr>
 
         <!-- Message Us -->
-        <section id="message-us">
+        <section  class="message" id="message-us">
             <header>
                 <h1>Message Us</h1>
             </header>
 
             <section class="message-us-section">
                 <!-- Form -->
-                <section>
+                <section class="form-input">
                     <form action="">
-                        <label>Name:</label>
-                        <input />
+                        <div class="form">
+                            <div class="form-row">
+                                <div class="form-info">
+                                    <label for="nama">Nama</label>
+                                </div>
+                                <div class="input-box"><input type="text" name="nama" placeholder="Nama"><br><br></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-info">
+                                    <label for="gender">Jenis Kelamin</label>
+                                </div>
+                                <div class="input-box">
+                                    <input type="radio" name="gender" id="pria">
+                                    <label for="pria" id="pria">Laki-laki</label>
+                                    <input type="radio" name="gender" id="wanita">
+                                    <label for="wanita" id="pria">Perempuan</label><br><br>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-info">
+                                    <label for="pesan">Pesan</label>
+                                </div>
+                                <div class="input-box">
+                                    <textarea name="pesan" id="Pesan" class="pesan-text" placeholder="Ketik sesuatu..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="submit" value="submit">
+                            </div>
+                            
+                            
+                        </div>
+                        
                     </form>
                 </section>
 
                 <!-- Result -->
                 <section class="result-container">
                     <div class="form-result">
-
+                        <textarea name="result" id="Result" class="result-text" readonly></textarea>
                     </div>
                 </section>
             </section>
+            
+           
+            </label>
         </section>
-        
+       <section class="footer">
+                <hr>
+                <footer>
+                    <label for="footer-text">Created by Awal Sholeh Subarkah</label>
+                </footer>
+            </section>
     </section>
-
-
-    <footer>
-
-    </footer>
 </body>
 </html>
