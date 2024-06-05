@@ -1,7 +1,10 @@
-/* Ini CSS */ 
 html {
     scroll-behavior: smooth;
-  }
+}
+
+html, body {
+    overflow-x: hidden;
+}
 
 nav {
     display: flex;
@@ -13,10 +16,29 @@ nav>section {
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(assets/1dd95285f63d17901452ec8c17e98dec.jpg);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, main, footer {
+    margin: 10px 0;
+}
+
+/* Media Queries untuk responsivitas */
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 0;
+    }
 }
 
 .logo-icon {
@@ -50,7 +72,7 @@ body {
     width: 0;
     height: 3px;
     bottom: 0;
-    background-color:  rgb(252, 67, 46);
+    background-color: rgb(252, 67, 46);
     transition: width 0.3s ease;
 }
 
@@ -63,7 +85,7 @@ body {
     left: 40%;
 }
 
-.nav-item::after { 
+.nav-item::after {
     right: 40%;
 }
 
@@ -72,7 +94,6 @@ body {
 }
 
 .nav-item:hover::after {
-    
     width: 40%;
 }
 
@@ -84,6 +105,7 @@ body {
 .banner-container {
     height: 500px;
     width: 95%;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(assets/ezgif-2-2d1559e952.gif);
@@ -97,13 +119,14 @@ body {
 .mid-info header {
     margin-left: 6%;
 }
+
 .mid-info {
     color: white;
 }
 
 .ikon-link {
-    width: 50px; 
-    height: 50px; 
+    width: 50px;
+    height: 50px;
     border: 1px solid white;
     margin-left: 15px;
 }
@@ -185,7 +208,7 @@ body {
 
 .form-input {
     float: left;
-    width: 75%;
+    width: 500px;
 }
 
 .pesan-text {
@@ -195,8 +218,6 @@ body {
     border-radius: 10px;
     padding: 3px 5px;
 }
-
-
 
 .label, input[type=text], select, .pesan-text {
     vertical-align: top;
@@ -219,29 +240,53 @@ input[type=submit] {
     float: right;
     margin-top: 18px;
     margin-left: 25%;
-  }
-  
-  input[type=submit]:hover {
+}
+
+input[type=submit]:hover {
     background-color: rgb(182, 21, 3);
-  }
+}
 
 .form-result {
     height: 220px;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .result-container {
-    margin-left: 10%;
-    width: 100%;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .result-text {
-    resize: none;
-    width: 85%;
-    height: 90%;
+    border: none; /* Default tanpa border */
+    padding: 10px;
     border-radius: 10px;
-    padding: 3px 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.has-border {
+    border: 1px solid #ccc; /* Border akan muncul jika kelas ini ditambahkan */
+    
+}
+
+.result-text .label {
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+}
+
+.result-text .value {
+    display: inline-block;
 }
 
 
@@ -258,4 +303,36 @@ footer {
 footer label {
     margin-right: 5%;
 }
- 
+
+/* Responsivitas untuk bagian "Message Us" */
+@media (max-width: 768px) {
+    .message-us-section {
+        flex-direction: column;
+    }
+
+    .form-row {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .form-info, .form-input, .result-container {
+        width: 100%;
+    }
+
+    .form-info {
+        margin-bottom: 5px;
+    }
+
+    .input-box, .result-container {
+        width: 90%;
+    }
+
+    input[type=text], .pesan-text, .result-text {
+        width: calc(100% - 10px); /* Agar tidak terlalu melebar */
+    }
+
+    input[type=submit] {
+        width: 90%;
+        margin: 0;
+    }
+}

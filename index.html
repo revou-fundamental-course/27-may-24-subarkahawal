@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Awal Portofolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -19,7 +21,7 @@
 
     <hr>
 
-    <section>
+    <section class="container">
         <!-- Home -->
         <section class="top-banner" id="home">
             <header>
@@ -77,22 +79,22 @@
             <section class="message-us-section">
                 <!-- Form -->
                 <section class="form-input">
-                    <form action="">
+                    <form id="contactForm">
                         <div class="form">
                             <div class="form-row">
                                 <div class="form-info">
                                     <label for="nama">Nama</label>
                                 </div>
-                                <div class="input-box"><input type="text" name="nama" placeholder="Nama"><br><br></div>
+                                <div class="input-box"><input type="text" name="nama" id="nama" placeholder="Nama" maxlength="50"><br><br></div>
                             </div>
                             <div class="form-row">
                                 <div class="form-info">
                                     <label for="gender">Jenis Kelamin</label>
                                 </div>
                                 <div class="input-box">
-                                    <input type="radio" name="gender" id="pria">
+                                    <input type="radio" name="gender" id="pria" value="Laki-laki">
                                     <label for="pria" id="pria">Laki-laki</label>
-                                    <input type="radio" name="gender" id="wanita">
+                                    <input type="radio" name="gender" id="wanita" value="Perempuan">
                                     <label for="wanita" id="pria">Perempuan</label><br><br>
                                 </div>
                             </div>
@@ -101,11 +103,11 @@
                                     <label for="pesan">Pesan</label>
                                 </div>
                                 <div class="input-box">
-                                    <textarea name="pesan" id="Pesan" class="pesan-text" placeholder="Ketik sesuatu..."></textarea>
+                                    <textarea name="pesan" id="pesan" class="pesan-text" placeholder="Ketik sesuatu..." maxlength="50"></textarea>
                                 </div>
                             </div>
                             <div class="form-row">
-                                <input type="submit" value="submit">
+                                <input type="submit" value="Submit">
                             </div>
                             
                             
@@ -117,7 +119,7 @@
                 <!-- Result -->
                 <section class="result-container">
                     <div class="form-result">
-                        <textarea name="result" id="Result" class="result-text" readonly></textarea>
+                        <div id="result" class="result-text"></div>
                     </div>
                 </section>
             </section>
@@ -125,12 +127,11 @@
            
             </label>
         </section>
-       <section class="footer">
-                <hr>
-                <footer>
-                    <label for="footer-text">Created by Awal Sholeh Subarkah</label>
-                </footer>
-            </section>
     </section>
+    <hr>
+    <footer>
+        <label for="footer-text">Created by Awal Sholeh Subarkah</label>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
